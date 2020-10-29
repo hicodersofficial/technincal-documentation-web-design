@@ -1,0 +1,154 @@
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: #74638f;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: roboto, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000002;
+    color: #ffffff;
+    line-height: 1.7;
+    margin: 0;
+}
+
+code {
+    font-family: fira code;
+    background-color: #1c1e21;
+    padding: 3px 5px;
+    margin: 6px 0;
+    border-radius: 5px;
+}
+
+pre code {
+    font-family: fira code;
+    margin: 6px 0;
+    border-radius: 5px;
+    background-color: rgb(40, 42, 54);
+    padding: 0.6rem;
+}
+
+section li {
+    margin: 5px 0;
+}
+
+section.main-section {
+    background-color: #121212;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 2rem 1rem;
+}
+
+.margin {
+    margin: 0rem 1rem;
+}
+
+nav#navbar ul {
+    padding-inline-start: 0;
+    height: 92%;
+    overflow-y: auto;
+}
+
+nav#navbar ul li a {
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    color: #eeeeee;
+    border-radius: 10px;
+    margin: 10px;
+    /* background-color: #1c2127; */
+    background-color: #0b0a0a;
+    transition: all 0.15s;
+}
+
+nav#navbar ul li a:hover {
+    background-color: #11181f8f;
+}
+
+nav#navbar {
+    background-color: #121212;
+    min-width: 300px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+nav#navbar header {
+    text-align: center;
+}
+
+nav#navbar li {
+    list-style: none;
+}
+
+#main-doc {
+    margin: 0 1rem 1rem 310px;
+}
+
+a {
+    text-decoration: none;
+    color: #005f57;
+}
+
+.note {
+    background-color: #fff3d4;
+    color: #000000;
+    border-left: 8px solid #f6b73c;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+}
+
+.is-mobile {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+    pre code {
+        white-space: break-spaces;
+    }
+
+    #main-doc {
+        margin: -1px 1rem 1rem 227px;
+    }
+
+    nav#navbar {
+        min-width: 196px;
+    }
+}
+
+@media (max-width: 800px) {
+    nav#navbar {
+        display: none;
+    }
+
+    #main-doc {
+        margin: 0;
+    }
+
+    .is-mobile {
+        display: unset;
+    }
+}
+
+menu {
+    color: #ffffff;
+}
+
+menu,
+#nav-close {
+    cursor: pointer;
+    padding: 10px;
+}

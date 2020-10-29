@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Documentation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <menu class="is-mobile">Menu</menu>
+    <nav id="navbar">
+        <header>
+            <span class="is-mobile" id="nav-close">&#10005;</span>
+            <h3>JavaScript Documentation</h3>
+        </header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introductory">Introductory</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Prerequisites">
+                    Prerequisites
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Java_vs_Javascript">
+                    Java vs JavaScript
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Getting_Started">Getting Started</a>
+            </li>
+
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li>
+                <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Data_types">Data types</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#If...else_Statement">If...else Statement</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Loops">Loops</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Function_declarations">Function declarations</a>
+            </li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introductory">
+            <header>
+                <h1>Introductory</h1>
+            </header>
+            <p>
+                JavaScript (JS) is a lightweight, interpreted, or
+                just-in-time compiled programming language with first-class
+                functions. While it is most well-known as the scripting
+                language for Web pages, many non-browser environments also
+                use it, such as Node.js, Apache CouchDB and Adobe Acrobat.
+                JavaScript is a prototype-based, multi-paradigm,
+                single-threaded, dynamic language, supporting
+                object-oriented, imperative, and declarative (e.g.
+                functional programming) styles. Read more about JavaScript.
+            </p>
+            <p>
+                This section is dedicated to the JavaScript language itself,
+                and not the parts that are specific to Web pages or other
+                host environments. For information about API specifics to
+                Web pages, please see Web APIs and DOM.
+            </p>
+
+        </section>
+        <section class="main-section" id="Prerequisites">
+            <header>
+                <h1>Prerequisites</h1>
+            </header>
+            <p>
+                This guide assumes you have the following basic background:
+            </p>
+            <ul>
+                <li>
+                    A general understanding of the Internet and the World
+                    Wide <code>Web (WWW)</code> .
+                </li>
+                <li>
+                    Good working knowledge of HyperText Markup Language
+                    <code>(HTML)</code>.
+                </li>
+                <li>
+                    Some programming experience. If you are new to
+                    programming, try one of the tutorials linked on the main
+                    page about <code>JavaScript</code>.
+                </li>
+            </ul>
+
+        </section>
+        <section class="main-section" id="Java_vs_Javascript">
+            <header>
+                <h1>Java vs JavaScript</h1>
+            </header>
+            <p>
+                <code>JavaScript</code> and <code>Java</code> are similar in
+                some ways but fundamentally different in some others. The
+                JavaScript language resembles Java but does not have Java's
+                static typing and strong type checking. JavaScript follows
+                most Java expression syntax, naming conventions and basic
+                control-flow constructs which was the reason why it was
+                renamed from LiveScript to JavaScript.
+            </p>
+
+            <p>
+                In contrast to Java's compile-time system of classes built
+                by declarations, JavaScript supports a runtime system based
+                on a small number of data types representing
+                <code>numeric</code>, <code>Boolean</code> , and
+                <code>string</code> values. JavaScript has a prototype-based
+                object model instead of the more common class-based object
+                model. The prototype-based model provides dynamic
+                inheritance; that is, what is inherited can vary for
+                individual objects. JavaScript also supports functions
+                without any special declarative requirements. Functions can
+                be properties of objects, executing as loosely typed
+                methods.
+            </p>
+
+            <p>
+                JavaScript is a very free-form language compared to Java.
+                You do not have to declare all variables, classes, and
+                methods. You do not have to be concerned with whether
+                methods are public, private, or protected, and you do not
+                have to implement interfaces. Variables, parameters, and
+                function return types are not explicitly typed.
+            </p>
+
+        </section>
+        <section class="main-section" id="Getting_Started">
+            <header>
+                <h1>Getting Started</h1>
+            </header>
+            <p>
+                JavaScript is one of the most popular modern web
+                technologies! As your JavaScript skills grow, your websites
+                will enter a new dimension of power and creativity.
+            </p>
+
+            <p>
+                However, getting comfortable with JavaScript is more
+                challenging than getting comfortable with HTML and CSS. You
+                may have to start small, and progress gradually. To begin,
+                let's examine how to add JavaScript to your page for
+                creating a Hello world! example. (Hello world! is the
+                standard for introductory programming examples.)
+            </p>
+            <ol>
+                <li>
+                    Go to your test site and create a new folder named
+                    scripts. Within the scripts folder, create a new file
+                    called <code>main.js</code>, and save it.
+                </li>
+                <li>
+                    In your <code>index.html</code> file, enter this code on
+                    a new line, just before the closing
+                    <code>&lt;body&gt;</code> tag:
+                </li>
+                <pre><code>&lt;script src="./scripts/main.js"&gt;&lt;/script&gt;</code></pre>
+                <li>
+                    This is doing the same job as the
+                    <code>&lt;link&gt;</code> element for <code>CSS</code>.
+                    It applies the JavaScript to the page, so it can have an
+                    effect on the HTML (along with the CSS, and anything
+                    else on the page).
+                </li>
+                <li>Add this code to the <code>main.js</code> file:</li>
+                <pre><code>const myHeading = document.querySelector("h1"); <br/> myHeading.textContent = "Hello world!";        </code></pre>
+                <li>
+                    Make sure the HTML and JavaScript files are saved. Then
+                    load <code>index.html</code> in your browser. You should
+                    see something like this:<img alt="" src="https://mdn.mozillademos.org/files/9543/hello-world.png"
+                        style="
+                                display: block;
+                                height: 236px;
+                                margin: 0px auto;
+                                margin-top: 20px;
+                                width: 100%;
+                            " />
+                </li>
+            </ol>
+
+        </section>
+
+        <div class="note margin">
+            <p>
+                <strong>Note</strong>: The reason the instructions (above)
+                place the
+                <a href="/en-US/docs/Web/HTML/Element/script"
+                    title="The HTML <script> element is used to embed executable code or data; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code></a>
+                element near the bottom of the HTML file is that
+                <strong>the browser reads code in the order it appears in the
+                    file</strong>.
+            </p>
+
+            <p>
+                If the JavaScript loads first and it is supposed to affect
+                the HTML that hasn't loaded yet, there could be problems.
+                Placing JavaScript near the bottom of an HTML page is one
+                way to accommodate this dependency. To learn more about
+                alternative approaches, see
+                <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies">Script
+                    loading strategies</a>.
+            </p>
+
+        </div>
+        <section class="main-section" id="Variables">
+            <header>
+                <h1>Variables</h1>
+            </header>
+            <p>
+                You use variables as symbolic names for values in your
+                application. The names of variables, called
+                <code>identifiers</code>, conform to certain rules.
+            </p>
+            <p>
+                A JavaScript <code>identifier</code> must start with a
+                <code>letter</code>, <code>underscore (_)</code>, or
+                <code>dollar sign ($)</code>; subsequent characters can also
+                be <code>digits (0-9)</code>. Because JavaScript is case
+                sensitive, letters include the characters
+                <code> "A"</code> through <code>"Z"</code> (uppercase) and
+                the characters <code>"a" </code> through
+                <code> "z"</code> (lowercase).
+            </p>
+            <p>
+                You can use ISO 8859-1 or Unicode letters such as å and ü in
+                identifiers. You can also use the Unicode escape sequences
+                as characters in identifiers. Some examples of legal names
+                are Number_hits, temp99, and _name.
+            </p>
+
+        </section>
+        <section class="main-section" id="Declaring_variables">
+            <header>
+                <h1>Declaring variables</h1>
+            </header>
+            <p>You can declare a variable in three ways:</p>
+            <p>With the keyword var. For example,</p>
+            <pre><code> var x = 42; </code></pre>
+            <p>
+                This syntax can be used to declare both local and global
+                variables.
+            </p>
+            <p>By simply assigning it a value. For example,</p>
+            <pre><code> x = 42; </code></pre>
+            <p>
+                This always declares a global variable. It generates a
+                strict JavaScript warning. You shouldn't use this variant.
+            </p>
+            <p>With the keyword let. For example,</p>
+            <pre><code> let y = 13; </code></pre>
+            <p>
+                This syntax can be used to declare a block scope local
+                variable. See Variable scope below.
+            </p>
+
+        </section>
+        <section class="main-section" id="Data_types">
+            <header>
+                <h1>Data types</h1>
+            </header>
+            <p>
+                The latest ECMAScript standard defines seven data types:
+            </p>
+            <ul>
+                <li>
+                    Six data types that are <code>primitives</code>:
+                    <ul>
+                        <li>
+                            <code>Boolean</code>. true and false.
+                        </li>
+                        <li>
+                            <code>null</code>. A special keyword denoting a null value. Because JavaScript is
+                            case-sensitive, null is not the same as Null, NULL, or any other variant.
+                        </li>
+                        <li>
+                            <code>undefined</code>. A top-level property whose value is undefined.
+                        </li>
+                        <li>
+                            <code>Number</code>. 42 or 3.14159.
+                        </li>
+                        <li>
+                            <code>String</code>. "Howdy"
+                        </li>
+                        <li>
+                            <code>Symbol (new in ECMAScript 2015)</code>. A data type whose instances are unique and
+                            immutable.
+                        </li>
+                    </ul>
+                <li>
+                    and <code>Object</code>
+                </li>
+            </ul>
+            <p>
+                Although these data types are a relatively small amount, they enable you to perform useful functions
+                with your applications. Objects and functions are the other fundamental elements in the language. You
+                can think of objects as named containers for values, and functions as procedures that your application
+                can perform.
+            </p>
+
+        </section>
+        <section class="main-section" id="If...else_Statement">
+            <header>
+                <h1>If...else Statement</h1>
+            </header>
+            <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause
+                to execute a statement if the condition is false. An if statement looks as follows:</p>
+            <pre><code> if (condition)  { 
+     statement_1;   
+ else {             
+     statement_2;   
+ }                 </code></pre>
+            <p>
+                condition can be any expression that evaluates to true or false. See Boolean for an explanation of what
+                evaluates to true and false. If condition evaluates to true, <code>statement_1</code> is executed;
+                otherwise, <code>statement_2</code> is executed. <code>statement_1</code> and <code>statement_2</code>
+                can be any statement, including further nested if statements.
+            </p>
+            <p>
+                You may also compound the statements using else if to have multiple conditions tested in sequence, as
+                follows:
+            </p>
+
+            <pre><code>if (condition_1) { statement_1; } else if (condition_2) { statement_2;   
+        } else if (condition_n) { statement_n; } else { statement_last; }</code></pre>
+
+            <p>In the case of multiple conditions only the first logical condition which evaluates to true will be
+                executed. To execute multiple statements, group them within a block statement ({ ... }) . In general,
+                it's good practice to always use block statements, especially when nesting if statements:</p>
+            <pre><code>if (condition) { statement_1_runs_if_condition_is_true;
+        statement_2_runs_if_condition_is_true; } else { 
+        statement_3_runs_if_condition_is_false;         
+        statement_4_runs_if_condition_is_false; }      </code></pre>
+            <p>It is advisable to not use simple assignments in a conditional expression, because the assignment can be
+                confused with equality when glancing over the code. For example, do not use the following code:</p>
+            <pre><code>if (x = y) { /* statements here */ }</code></pre>
+            <p>If you need to use an assignment in a conditional expression, a common practice is to put additional
+                parentheses around the assignment. For example:</p>
+            <pre><code>if ((x = y)) { /* statements here */ }</code></pre>
+
+        </section>
+        <section class="main-section" id="Loops">
+            <header>
+                <h1>Loops</h1>
+            </header>
+            <p>
+                Loops offer a quick and easy way to do something repeatedly. This chapter of the JavaScript Guide
+                introduces the different iteration statements available to JavaScript.
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration"
+                    target="_blank">MDN</a>
+            </p>
+
+        </section>
+        <section class="main-section" id="Function_declarations">
+            <header>
+                <h1>Function declarations</h1>
+            </header>
+            <p>A function definition (also called a function declaration, or function statement) consists of the
+                function keyword, followed by:</p>
+            <ul>
+                <li>The name of the function.</li>
+                <li>
+                    A list of arguments to the function, enclosed in parentheses and separated by commas.
+                </li>
+                <li>
+                    The JavaScript statements that define the function, enclosed in curly brackets, { }.
+                </li>
+
+
+            </ul>
+            <p>For example, the following code defines a simple function named square:</p>
+            <pre><code>function square(number) { return number * number; }</code></pre>
+            The function square takes one argument, called number. The function consists of one statement that says to
+            return the argument of the function (that is, number) multiplied by itself. The return statement specifies
+            the value returned by the function.
+
+            return number * number;
+            Primitive parameters (such as a number) are passed to functions by value; the value is passed to the
+            function, but if the function changes the value of the parameter, this change is not reflected globally or
+            in the calling function.
+
+        </section>
+
+        <div class="note margin">
+            <p>
+                <strong>Note:</strong> This is just dummy example of
+                Technical Documentation.
+            </p>
+
+        </div>
+        <section class="main-section" id="Reference">
+            <header>
+                <h1>Reference</h1>
+            </header>
+            <p>
+                All the documentation in this page is taken from
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a>
+            </p>
+
+        </section>
+    </main>
+    <script>
+        document.querySelector('menu').addEventListener('click', () => {
+            document.querySelector('#navbar').style.display = "unset"
+        });
+        document.querySelector('#nav-close').addEventListener('click', () => {
+            document.querySelector('#navbar').style.display = "none"
+        })
+    </script>
+</body>
+
+</html>
